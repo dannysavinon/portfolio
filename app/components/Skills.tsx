@@ -132,6 +132,7 @@ const skillCategories = [
   {
     title: "Scripting",
     skills: [
+      { name: "Python", icon: <FaPython size={32} /> },
       { name: "PowerShell", icon: <VscTerminalPowershell size={32} /> },
       { name: "Bash", icon: <FaTerminal size={32} /> },
     ],
