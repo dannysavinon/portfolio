@@ -1,0 +1,119 @@
+import { FaBookOpen } from "react-icons/fa";
+
+const caseStudies = [
+  {
+    title: "Multi-Region Fintech Platform on AWS",
+    problem: "Company needed a secure, compliant, and highly available multi-region architecture to support payments across U.S. and LATAM without increasing operational overhead.",
+    solution: "Designed and implemented a multi-account AWS landing zone using AWS Organizations, IAM Identity Center, GuardDuty, Config, and centralized logging, paired with ECS Fargate services and automated CI/CD pipelines.",
+    impact: "Enabled expansion into new markets with 99.9%+ uptime, strong security posture, and clear separation of regulatory domains while keeping deployment velocity high.",
+    technologies: ["AWS Organizations", "ECS Fargate", "GuardDuty", "CloudTrail", "GitHub Actions", "Terraform"],
+    cta: "Discuss this architecture",
+  },
+  {
+    title: "Deployment Optimization & CI/CD Standardization",
+    problem: "Engineering teams were deploying via manual EC2 changes, leading to 45-minute releases, inconsistent environments, and frequent deployment failures.",
+    solution: "Re-platformed workloads onto ECS Fargate with blue-green deployments and standardized GitHub Actions pipelines, including branching strategy, environment promotion, and automated testing gates.",
+    impact: "Cut deployment time from 45 minutes to 8 minutes and reduced deployment-related incidents by ~75%, freeing engineers to ship features instead of fighting the pipeline.",
+    technologies: ["ECS Fargate", "GitHub Actions", "Blue-Green Deployments", "AWS CodeDeploy", "Infrastructure Automation"],
+    cta: "View CI/CD approach",
+  },
+  {
+    title: "Mobile Release Pipeline Automation",
+    problem: "Android and iOS releases were manual, error-prone processes taking significant developer time and causing inconsistent release cadences across platforms.",
+    solution: "Built comprehensive Azure DevOps pipelines for both Android and iOS applications, automating build, test, signing, and deployment workflows with environment-specific configurations.",
+    impact: "Cut mobile release times by 40%, significantly improved build reliability, and enabled consistent release cadence across both platforms while reducing manual intervention.",
+    technologies: ["Azure DevOps", "iOS", "Android", "CI/CD", "Automated Testing", "Code Signing"],
+    cta: "Learn about mobile CI/CD",
+  },
+  {
+    title: "AWS Account Governance & Security",
+    problem: "Rapid cloud adoption led to sprawling AWS accounts with inconsistent security policies, making compliance audits difficult and increasing security risk.",
+    solution: "Implemented AWS Control Tower with Landing Zone Accelerator, establishing guardrails, centralized logging, and automated account provisioning through CodePipeline and CodeCommit.",
+    impact: "Streamlined account governance enterprise-wide, enforced consistent security policies, and supported PCI and SOC 2 compliance readiness initiatives.",
+    technologies: ["AWS Control Tower", "Landing Zone Accelerator", "CodePipeline", "AWS Organizations", "IAM Identity Center"],
+    cta: "Explore governance model",
+  },
+  {
+    title: "Infrastructure Monitoring & Observability",
+    problem: "Lack of visibility into system health led to reactive incident response, extended outages, and difficulty identifying performance bottlenecks.",
+    solution: "Developed comprehensive CloudWatch dashboards and alarms with PagerDuty integration, enabling proactive monitoring and structured incident response workflows.",
+    impact: "Reduced mean time to recovery (MTTR) by 15% through proactive incident detection and resolution, with 10% faster incident response times.",
+    technologies: ["CloudWatch", "PagerDuty", "SNS", "Lambda", "Dashboards", "Alerting"],
+    cta: "Review monitoring strategy",
+  },
+  {
+    title: "Infrastructure as Code Standardization",
+    problem: "Manual infrastructure provisioning caused configuration drift, inconsistent environments, and deployment errors across development, staging, and production.",
+    solution: "Expanded CloudFormation and CDK utilization with modular, reusable templates, implementing consistent structure and automated validation across all environments.",
+    impact: "Improved IaC consistency by 35%, cut manual configuration errors by 30%, and achieved 95% compliance with automated patch management.",
+    technologies: ["CloudFormation", "AWS CDK", "Systems Manager", "Parameter Store", "Infrastructure Automation"],
+    cta: "See IaC approach",
+  },
+];
+
+export default function CaseStudies() {
+  return (
+    <section id="case-studies" className="py-20 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-900/5 to-transparent pointer-events-none" />
+
+      <div className="section-container relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 flex items-center justify-center gap-3">
+            <FaBookOpen className="text-primary" />
+            <span className="gradient-text">Case Studies</span>
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-primary to-red-400 mx-auto rounded-full" />
+          <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
+            A selection of projects that show how I approach complex infrastructure, automation, and reliability challenges.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {caseStudies.map((study, index) => (
+            <div
+              key={index}
+              className="card card-hover p-6 border-l-4 border-l-primary"
+            >
+              <h3 className="text-xl font-bold text-white mb-4">{study.title}</h3>
+
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-primary font-semibold mb-1">Problem</h4>
+                  <p className="text-gray-400 text-sm">{study.problem}</p>
+                </div>
+
+                <div>
+                  <h4 className="text-primary font-semibold mb-1">Solution</h4>
+                  <p className="text-gray-400 text-sm">{study.solution}</p>
+                </div>
+
+                <div>
+                  <h4 className="text-primary font-semibold mb-1">Impact</h4>
+                  <p className="text-gray-400 text-sm">{study.impact}</p>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-2 mt-6">
+                {study.technologies.map((tech, techIndex) => (
+                  <span
+                    key={techIndex}
+                    className="px-3 py-1 text-xs rounded-full border border-primary/30 text-primary bg-primary/10"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <a
+                href="#contact"
+                className="inline-block mt-4 text-primary hover:text-red-400 transition-colors text-sm"
+              >
+                {study.cta}
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
