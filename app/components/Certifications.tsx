@@ -108,7 +108,7 @@ export default function Certifications() {
               "Supported PCI and SOC 2 compliance readiness initiatives",
             ].map((achievement, index) => (
               <div key={index} className="flex items-start gap-3">
-                <span className="text-primary text-xl">✓</span>
+                <span className="text-primary text-xl font-bold">+</span>
                 <p className="text-gray-300">{achievement}</p>
               </div>
             ))}
