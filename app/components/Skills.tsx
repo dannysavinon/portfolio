@@ -28,6 +28,12 @@ import {
   SiSwift,
   SiNewrelic,
   SiSnowflake,
+  SiPostgresql,
+  SiMysql,
+  SiMongodb,
+  SiRedis,
+  SiApachekafka,
+  SiRabbitmq,
 } from "react-icons/si";
 import { VscAzureDevops, VscTerminalPowershell } from "react-icons/vsc";
 
@@ -92,6 +98,26 @@ const skillCategories = [
       { name: "PagerDuty", icon: <SiPagerduty size={32} /> },
       { name: "Sumo Logic", icon: <FaBell size={32} /> },
       { name: "Sigma", icon: <FaBell size={32} /> },
+    ],
+  },
+  {
+    title: "Databases",
+    skills: [
+      { name: "PostgreSQL", icon: <SiPostgresql size={32} /> },
+      { name: "MySQL", icon: <SiMysql size={32} /> },
+      { name: "MongoDB", icon: <SiMongodb size={32} /> },
+      { name: "Redis", icon: <SiRedis size={32} /> },
+      { name: "RDS", icon: <FaAws size={32} /> },
+      { name: "DynamoDB", icon: <FaAws size={32} /> },
+    ],
+  },
+  {
+    title: "Message Queues",
+    skills: [
+      { name: "SQS", icon: <FaAws size={32} /> },
+      { name: "SNS", icon: <FaAws size={32} /> },
+      { name: "Kafka", icon: <SiApachekafka size={32} /> },
+      { name: "RabbitMQ", icon: <SiRabbitmq size={32} /> },
     ],
   },
   {
