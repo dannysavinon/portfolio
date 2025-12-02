@@ -7,7 +7,6 @@ const caseStudies = [
     solution: "Designed and implemented a multi-account AWS landing zone using AWS Organizations, IAM Identity Center, GuardDuty, Config, and centralized logging, paired with ECS Fargate services and automated CI/CD pipelines.",
     impact: "Enabled expansion into new markets with 99.9%+ uptime, strong security posture, and clear separation of regulatory domains while keeping deployment velocity high.",
     technologies: ["AWS Organizations", "ECS Fargate", "GuardDuty", "CloudTrail", "GitHub Actions", "Terraform"],
-    cta: "Discuss this architecture",
   },
   {
     title: "Deployment Optimization & CI/CD Standardization",
@@ -15,7 +14,6 @@ const caseStudies = [
     solution: "Re-platformed workloads onto ECS Fargate with blue-green deployments and standardized GitHub Actions pipelines, including branching strategy, environment promotion, and automated testing gates.",
     impact: "Cut deployment time from 45 minutes to 8 minutes and reduced deployment-related incidents by ~75%, freeing engineers to ship features instead of fighting the pipeline.",
     technologies: ["ECS Fargate", "GitHub Actions", "Blue-Green Deployments", "AWS CodeDeploy", "Infrastructure Automation"],
-    cta: "View CI/CD approach",
   },
   {
     title: "Mobile Release Pipeline Automation",
@@ -23,7 +21,6 @@ const caseStudies = [
     solution: "Built comprehensive Azure DevOps pipelines for both Android and iOS applications, automating build, test, signing, and deployment workflows with environment-specific configurations.",
     impact: "Cut mobile release times by 40%, significantly improved build reliability, and enabled consistent release cadence across both platforms while reducing manual intervention.",
     technologies: ["Azure DevOps", "iOS", "Android", "CI/CD", "Automated Testing", "Code Signing"],
-    cta: "Learn about mobile CI/CD",
   },
   {
     title: "AWS Account Governance & Security",
@@ -31,7 +28,6 @@ const caseStudies = [
     solution: "Implemented AWS Control Tower with Landing Zone Accelerator, establishing guardrails, centralized logging, and automated account provisioning through CodePipeline and CodeCommit.",
     impact: "Streamlined account governance enterprise-wide, enforced consistent security policies, and supported PCI and SOC 2 compliance readiness initiatives.",
     technologies: ["AWS Control Tower", "Landing Zone Accelerator", "CodePipeline", "AWS Organizations", "IAM Identity Center"],
-    cta: "Explore governance model",
   },
   {
     title: "Infrastructure Monitoring & Observability",
@@ -39,7 +35,6 @@ const caseStudies = [
     solution: "Developed comprehensive CloudWatch dashboards and alarms with PagerDuty integration, enabling proactive monitoring and structured incident response workflows.",
     impact: "Reduced mean time to recovery (MTTR) by 15% through proactive incident detection and resolution, with 10% faster incident response times.",
     technologies: ["CloudWatch", "PagerDuty", "SNS", "Lambda", "Dashboards", "Alerting"],
-    cta: "Review monitoring strategy",
   },
   {
     title: "Infrastructure as Code Standardization",
@@ -47,7 +42,6 @@ const caseStudies = [
     solution: "Expanded CloudFormation and CDK utilization with modular, reusable templates, implementing consistent structure and automated validation across all environments.",
     impact: "Improved IaC consistency by 35%, cut manual configuration errors by 30%, and achieved 95% compliance with automated patch management.",
     technologies: ["CloudFormation", "AWS CDK", "Systems Manager", "Parameter Store", "Infrastructure Automation"],
-    cta: "See IaC approach",
   },
 ];
 
@@ -103,13 +97,6 @@ export default function CaseStudies() {
                   </span>
                 ))}
               </div>
-
-              <a
-                href="#contact"
-                className="inline-block mt-4 text-primary hover:text-red-400 transition-colors text-sm"
-              >
-                {study.cta}
-              </a>
             </div>
           ))}
         </div>

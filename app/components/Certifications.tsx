@@ -1,4 +1,4 @@
-import { FaAws, FaCertificate, FaSpinner } from "react-icons/fa";
+import { FaAws, FaCertificate, FaSpinner, FaMicrosoft, FaNetworkWired } from "react-icons/fa";
 
 const certifications = [
   {
@@ -6,21 +6,48 @@ const certifications = [
     level: "Associate",
     icon: <FaAws size={40} />,
     status: "earned",
-    color: "from-orange-500 to-yellow-500",
+    bgColor: "from-orange-500/20 to-yellow-500/20",
+    iconColor: "text-orange-400",
   },
   {
     name: "AWS Certified Developer",
     level: "Associate",
     icon: <FaAws size={40} />,
     status: "earned",
-    color: "from-orange-500 to-yellow-500",
+    bgColor: "from-orange-500/20 to-yellow-500/20",
+    iconColor: "text-orange-400",
+  },
+  {
+    name: "Microsoft 365 Certified",
+    level: "Fundamentals",
+    icon: <FaMicrosoft size={40} />,
+    status: "earned",
+    bgColor: "from-blue-500/20 to-cyan-500/20",
+    iconColor: "text-blue-400",
+  },
+  {
+    name: "Microsoft Certified: Azure",
+    level: "Fundamentals",
+    icon: <FaMicrosoft size={40} />,
+    status: "earned",
+    bgColor: "from-blue-500/20 to-cyan-500/20",
+    iconColor: "text-blue-400",
+  },
+  {
+    name: "Cisco Meraki Network Operator",
+    level: "Certified",
+    icon: <FaNetworkWired size={40} />,
+    status: "earned",
+    bgColor: "from-green-500/20 to-teal-500/20",
+    iconColor: "text-green-400",
   },
   {
     name: "AWS Certified Solutions Architect",
     level: "Professional",
     icon: <FaAws size={40} />,
     status: "in-progress",
-    color: "from-gray-500 to-gray-600",
+    bgColor: "from-gray-500/20 to-gray-600/20",
+    iconColor: "text-gray-500",
   },
 ];
 
@@ -40,7 +67,7 @@ export default function Certifications() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {certifications.map((cert, index) => (
             <div
               key={index}
@@ -50,7 +77,7 @@ export default function Certifications() {
             >
               {/* Badge glow effect */}
               <div
-                className={`absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-32 bg-gradient-to-b ${cert.color} opacity-10 blur-3xl`}
+                className={`absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-32 bg-gradient-to-b ${cert.bgColor} opacity-10 blur-3xl`}
               />
 
               {/* Status badge */}
@@ -63,11 +90,7 @@ export default function Certifications() {
 
               {/* Icon */}
               <div
-                className={`inline-flex items-center justify-center w-20 h-20 rounded-full mb-6 ${
-                  cert.status === "earned"
-                    ? "bg-gradient-to-br from-orange-500/20 to-yellow-500/20 text-orange-400"
-                    : "bg-gray-800 text-gray-500"
-                }`}
+                className={`inline-flex items-center justify-center w-20 h-20 rounded-full mb-6 bg-gradient-to-br ${cert.bgColor} ${cert.iconColor}`}
               >
                 {cert.icon}
               </div>
