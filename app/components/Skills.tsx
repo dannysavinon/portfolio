@@ -15,10 +15,9 @@ import {
   SiKubernetes,
   SiTerraform,
   SiGithubactions,
-  SiPowershell,
   SiPagerduty,
 } from "react-icons/si";
-import { VscAzureDevops } from "react-icons/vsc";
+import { VscAzureDevops, VscTerminalPowershell } from "react-icons/vsc";
 
 const skillCategories = [
   {
@@ -56,7 +55,7 @@ const skillCategories = [
     title: "Scripting",
     skills: [
       { name: "Python", icon: <FaPython size={32} /> },
-      { name: "PowerShell", icon: <SiPowershell size={32} /> },
+      { name: "PowerShell", icon: <VscTerminalPowershell size={32} /> },
       { name: "Bash", icon: <FaTerminal size={32} /> },
     ],
   },
