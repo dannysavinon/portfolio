@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope, FaHeart } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -8,9 +8,8 @@ export default function Footer() {
       <div className="section-container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Copyright */}
-          <p className="text-gray-400 text-sm flex items-center gap-1">
-            © {currentYear} Danny Savinon. Built with{" "}
-            <FaHeart className="text-primary" /> using React
+          <p className="text-gray-400 text-sm">
+            © {currentYear} Danny Savinon
           </p>
 
           {/* Social Links */}
