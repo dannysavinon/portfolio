@@ -125,11 +125,6 @@ const skillCategories = [
     skills: [
       { name: "Snowflake", icon: <SiSnowflake size={32} /> },
       { name: "SFTP", icon: <FaServer size={32} /> },
-    ],
-  },
-  {
-    title: "Collaboration",
-    skills: [
       { name: "Jira", icon: <FaJira size={32} /> },
       { name: "Confluence", icon: <FaConfluence size={32} /> },
     ],
@@ -160,11 +155,11 @@ export default function Skills() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="card card-hover p-6"
+              className="card card-hover p-6 min-h-[180px]"
             >
               <h3 className="text-xl font-semibold text-primary mb-6">
                 {category.title}
