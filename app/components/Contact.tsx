@@ -1,6 +1,6 @@
 "use client";
 
-import { FaEnvelope, FaLinkedin, FaGithub, FaPhone } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaPhone } from "react-icons/fa";
 import ScrollReveal from "./ScrollReveal";
 
 const socialLinks = [
@@ -18,11 +18,6 @@ const socialLinks = [
     icon: <FaLinkedin size={28} />,
     label: "LinkedIn",
     href: "https://linkedin.com/in/dannysavinon",
-  },
-  {
-    icon: <FaGithub size={28} />,
-    label: "GitHub",
-    href: "https://github.com/dannysavinon",
   },
 ];
 
