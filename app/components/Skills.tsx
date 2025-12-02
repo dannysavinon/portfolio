@@ -83,14 +83,6 @@ const skillCategories = [
     ],
   },
   {
-    title: "Scripting",
-    skills: [
-      { name: "Python", icon: <FaPython size={32} /> },
-      { name: "PowerShell", icon: <VscTerminalPowershell size={32} /> },
-      { name: "Bash", icon: <FaTerminal size={32} /> },
-    ],
-  },
-  {
     title: "Monitoring & Observability",
     skills: [
       { name: "CloudWatch", icon: <FaAws size={32} /> },
@@ -135,6 +127,14 @@ const skillCategories = [
       { name: "Linux", icon: <FaLinux size={32} /> },
       { name: "macOS", icon: <FaApple size={32} /> },
       { name: "Windows", icon: <FaWindows size={32} /> },
+    ],
+  },
+  {
+    title: "Scripting",
+    skills: [
+      { name: "Python", icon: <FaPython size={32} /> },
+      { name: "PowerShell", icon: <VscTerminalPowershell size={32} /> },
+      { name: "Bash", icon: <FaTerminal size={32} /> },
     ],
   },
 ];
