@@ -7,10 +7,12 @@ import CaseStudies from "../components/CaseStudies";
 import Certifications from "../components/Certifications";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import CircuitBackground from "../components/CircuitBackground";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <CircuitBackground />
       <Navbar />
       <main>
         <Hero />

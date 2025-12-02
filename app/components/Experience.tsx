@@ -1,4 +1,7 @@
+"use client";
+
 import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
+import ScrollReveal from "./ScrollReveal";
 
 const experiences = [
   {
@@ -72,12 +75,14 @@ export default function Experience() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-900/5 to-transparent pointer-events-none" />
 
       <div className="section-container relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Work <span className="gradient-text">Experience</span>
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-red-400 mx-auto rounded-full" />
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Work <span className="gradient-text">Experience</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-red-400 mx-auto rounded-full" />
+          </div>
+        </ScrollReveal>
 
         <div className="relative">
           {/* Timeline line */}
@@ -85,12 +90,16 @@ export default function Experience() {
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
-              <div
+              <ScrollReveal
                 key={index}
-                className={`flex flex-col md:flex-row gap-8 ${
-                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                }`}
+                direction={index % 2 === 0 ? "left" : "right"}
+                delay={index * 150}
               >
+                <div
+                  className={`flex flex-col md:flex-row gap-8 ${
+                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                  }`}
+                >
                 {/* Content */}
                 <div className="md:w-1/2">
                   <div
@@ -150,7 +159,8 @@ export default function Experience() {
 
                 {/* Spacer for alternating layout */}
                 <div className="hidden md:block md:w-1/2" />
-              </div>
+                </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>

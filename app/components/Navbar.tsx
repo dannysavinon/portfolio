@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import CircuitLogo from "./CircuitLogo";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -14,10 +15,23 @@ const navLinks = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+
+      // Determine active section based on scroll position
+      const sections = navLinks.map((link) => link.href.replace("#", ""));
+      const scrollPosition = window.scrollY + 100;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(sections[i]);
+          break;
+        }
+      }
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -34,21 +48,29 @@ export default function Navbar() {
       <div className="section-container">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#home" className="text-2xl font-bold gradient-text">
-            DS
+          <a href="#home" className="flex items-center gap-2 text-primary hover:text-red-400 transition-colors">
+            <CircuitLogo className="w-10 h-10" />
+            <span className="text-xl font-bold gradient-text">DS</span>
           </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="nav-link text-gray-300 hover:text-white transition-colors duration-300"
-              >
-                {link.name}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = activeSection === link.href.replace("#", "");
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className={`nav-link transition-colors duration-300 ${
+                    isActive
+                      ? "text-primary font-medium"
+                      : "text-gray-300 hover:text-white"
+                  }`}
+                >
+                  {link.name}
+                </a>
+              );
+            })}
           </div>
 
           {/* Mobile Menu Button */}
@@ -64,16 +86,23 @@ export default function Navbar() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden bg-black/95 backdrop-blur-md rounded-lg mt-2 p-4 border border-gray-800">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="block py-3 text-gray-300 hover:text-primary transition-colors duration-300"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = activeSection === link.href.replace("#", "");
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className={`block py-3 transition-colors duration-300 ${
+                    isActive
+                      ? "text-primary font-medium"
+                      : "text-gray-300 hover:text-primary"
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </a>
+              );
+            })}
           </div>
         )}
       </div>

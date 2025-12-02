@@ -1,4 +1,8 @@
+"use client";
+
 import { FaAws, FaCertificate, FaSpinner, FaMicrosoft, FaNetworkWired } from "react-icons/fa";
+import ScrollReveal from "./ScrollReveal";
+import TiltCard from "./TiltCard";
 
 const certifications = [
   {
@@ -57,24 +61,26 @@ export default function Certifications() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-900/5 to-transparent pointer-events-none" />
 
       <div className="section-container relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text">Certifications</span>
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-red-400 mx-auto rounded-full" />
-          <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
-            Professional certifications validating my cloud expertise
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <span className="gradient-text">Certifications</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-red-400 mx-auto rounded-full" />
+            <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
+              Professional certifications validating my cloud expertise
+            </p>
+          </div>
+        </ScrollReveal>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {certifications.map((cert, index) => (
-            <div
-              key={index}
-              className={`card card-hover p-6 text-center relative overflow-hidden ${
-                cert.status === "in-progress" ? "opacity-80" : ""
-              }`}
-            >
+            <ScrollReveal key={index} delay={index * 100}>
+              <TiltCard
+                className={`card card-hover p-6 text-center relative overflow-hidden h-full ${
+                  cert.status === "in-progress" ? "opacity-80" : ""
+                }`}
+              >
               {/* Badge glow effect */}
               <div
                 className={`absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-32 bg-gradient-to-b ${cert.bgColor} opacity-10 blur-3xl`}
@@ -112,7 +118,8 @@ export default function Certifications() {
                   <span>Certified</span>
                 </div>
               )}
-            </div>
+              </TiltCard>
+            </ScrollReveal>
           ))}
         </div>
 

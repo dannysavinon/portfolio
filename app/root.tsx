@@ -9,6 +9,7 @@ import type { LinksFunction } from "react-router";
 import "./app.css";
 
 export const links: LinksFunction = () => [
+  { rel: "icon", type: "image/svg+xml", href: "/portfolio/favicon.svg" },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",

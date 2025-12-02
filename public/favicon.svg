@@ -1,0 +1,53 @@
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="48" height="48" rx="8" fill="#0a0a0a"/>
+
+  <!-- Circuit board paths -->
+  <path
+    d="M24 4V12M24 36V44M4 24H12M36 24H44"
+    stroke="#ef4444"
+    stroke-width="2"
+    stroke-linecap="round"
+  />
+
+  <!-- Diagonal traces -->
+  <path
+    d="M10 10L16 16M32 32L38 38M38 10L32 16M16 32L10 38"
+    stroke="#ef4444"
+    stroke-width="2"
+    stroke-linecap="round"
+  />
+
+  <!-- Center chip -->
+  <rect
+    x="14"
+    y="14"
+    width="20"
+    height="20"
+    rx="2"
+    stroke="#ef4444"
+    stroke-width="2"
+    fill="none"
+  />
+
+  <!-- Inner circuit pattern -->
+  <path
+    d="M18 20H22L24 22L26 20H30M18 28H22L24 26L26 28H30"
+    stroke="#ef4444"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Connection nodes -->
+  <circle cx="24" cy="4" r="2" fill="#ef4444" />
+  <circle cx="24" cy="44" r="2" fill="#ef4444" />
+  <circle cx="4" cy="24" r="2" fill="#ef4444" />
+  <circle cx="44" cy="24" r="2" fill="#ef4444" />
+
+  <!-- Corner nodes -->
+  <circle cx="10" cy="10" r="1.5" fill="#ef4444" />
+  <circle cx="38" cy="10" r="1.5" fill="#ef4444" />
+  <circle cx="10" cy="38" r="1.5" fill="#ef4444" />
+  <circle cx="38" cy="38" r="1.5" fill="#ef4444" />
+</svg>

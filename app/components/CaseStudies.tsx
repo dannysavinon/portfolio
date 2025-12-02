@@ -1,4 +1,8 @@
+"use client";
+
 import { FaBookOpen } from "react-icons/fa";
+import ScrollReveal from "./ScrollReveal";
+import TiltCard from "./TiltCard";
 
 const caseStudies = [
   {
@@ -51,53 +55,54 @@ export default function CaseStudies() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-900/5 to-transparent pointer-events-none" />
 
       <div className="section-container relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 flex items-center justify-center gap-3">
-            <FaBookOpen className="text-primary" />
-            <span className="gradient-text">Case Studies</span>
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-red-400 mx-auto rounded-full" />
-          <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
-            A selection of projects that show how I approach complex infrastructure, automation, and reliability challenges.
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 flex items-center justify-center gap-3">
+              <FaBookOpen className="text-primary" />
+              <span className="gradient-text">Case Studies</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-red-400 mx-auto rounded-full" />
+            <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
+              A selection of projects that show how I approach complex infrastructure, automation, and reliability challenges.
+            </p>
+          </div>
+        </ScrollReveal>
 
         <div className="grid md:grid-cols-2 gap-8">
           {caseStudies.map((study, index) => (
-            <div
-              key={index}
-              className="card card-hover p-6 border-l-4 border-l-primary"
-            >
-              <h3 className="text-xl font-bold text-white mb-4">{study.title}</h3>
+            <ScrollReveal key={index} delay={index * 100}>
+              <TiltCard className="card card-hover p-6 border-l-4 border-l-primary h-full">
+                <h3 className="text-xl font-bold text-white mb-4">{study.title}</h3>
 
-              <div className="space-y-4">
-                <div>
-                  <h4 className="text-primary font-semibold mb-1">Problem</h4>
-                  <p className="text-gray-400 text-sm">{study.problem}</p>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="text-primary font-semibold mb-1">Problem</h4>
+                    <p className="text-gray-400 text-sm">{study.problem}</p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-primary font-semibold mb-1">Solution</h4>
+                    <p className="text-gray-400 text-sm">{study.solution}</p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-primary font-semibold mb-1">Impact</h4>
+                    <p className="text-gray-400 text-sm">{study.impact}</p>
+                  </div>
                 </div>
 
-                <div>
-                  <h4 className="text-primary font-semibold mb-1">Solution</h4>
-                  <p className="text-gray-400 text-sm">{study.solution}</p>
+                <div className="flex flex-wrap gap-2 mt-6">
+                  {study.technologies.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className="px-3 py-1 text-xs rounded-full border border-primary/30 text-primary bg-primary/10 hover:bg-primary/20 transition-colors"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
-
-                <div>
-                  <h4 className="text-primary font-semibold mb-1">Impact</h4>
-                  <p className="text-gray-400 text-sm">{study.impact}</p>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-2 mt-6">
-                {study.technologies.map((tech, techIndex) => (
-                  <span
-                    key={techIndex}
-                    className="px-3 py-1 text-xs rounded-full border border-primary/30 text-primary bg-primary/10"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
+              </TiltCard>
+            </ScrollReveal>
           ))}
         </div>
       </div>

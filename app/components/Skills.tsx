@@ -1,3 +1,5 @@
+"use client";
+
 import {
   FaAws,
   FaMicrosoft,
@@ -16,6 +18,8 @@ import {
   FaJira,
   FaConfluence,
 } from "react-icons/fa";
+import ScrollReveal from "./ScrollReveal";
+import TiltCard from "./TiltCard";
 import {
   SiKubernetes,
   SiTerraform,
@@ -34,6 +38,7 @@ import {
   SiRedis,
   SiApachekafka,
   SiRabbitmq,
+  SiPacker,
 } from "react-icons/si";
 import { VscAzureDevops, VscTerminalPowershell } from "react-icons/vsc";
 
@@ -60,6 +65,7 @@ const skillCategories = [
       { name: "CloudFormation", icon: <FaAws size={32} /> },
       { name: "CDK", icon: <FaAws size={32} /> },
       { name: "Terraform", icon: <SiTerraform size={32} /> },
+      { name: "Packer", icon: <SiPacker size={32} /> },
     ],
   },
   {
@@ -145,41 +151,42 @@ export default function Skills() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-900/5 to-transparent pointer-events-none" />
 
       <div className="section-container relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Technical <span className="gradient-text">Skills</span>
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-red-400 mx-auto rounded-full" />
-          <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
-            Technologies and tools I work with to build and maintain cloud infrastructure
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Technical <span className="gradient-text">Skills</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-red-400 mx-auto rounded-full" />
+            <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
+              Technologies and tools I work with to build and maintain cloud infrastructure
+            </p>
+          </div>
+        </ScrollReveal>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {skillCategories.map((category, index) => (
-            <div
-              key={index}
-              className="card card-hover p-6 min-h-[180px]"
-            >
-              <h3 className="text-xl font-semibold text-primary mb-6">
-                {category.title}
-              </h3>
-              <div className="flex flex-wrap gap-4">
-                {category.skills.map((skill, skillIndex) => (
-                  <div
-                    key={skillIndex}
-                    className="skill-badge flex items-center gap-3 group"
-                  >
-                    <span className="text-gray-400 group-hover:text-primary transition-colors">
-                      {skill.icon}
-                    </span>
-                    <span className="text-gray-300 group-hover:text-white transition-colors">
-                      {skill.name}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <ScrollReveal key={index} delay={index * 50}>
+              <TiltCard className="card card-hover p-6 min-h-[180px]">
+                <h3 className="text-xl font-semibold text-primary mb-6">
+                  {category.title}
+                </h3>
+                <div className="flex flex-wrap gap-4">
+                  {category.skills.map((skill, skillIndex) => (
+                    <div
+                      key={skillIndex}
+                      className="skill-badge flex items-center gap-3 group"
+                    >
+                      <span className="text-gray-400 group-hover:text-primary transition-all duration-300 group-hover:scale-110">
+                        {skill.icon}
+                      </span>
+                      <span className="text-gray-300 group-hover:text-white transition-colors">
+                        {skill.name}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </TiltCard>
+            </ScrollReveal>
           ))}
         </div>
       </div>

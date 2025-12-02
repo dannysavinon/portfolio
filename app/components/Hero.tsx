@@ -1,6 +1,21 @@
+"use client";
+
 import { FaGithub, FaLinkedin, FaEnvelope, FaChevronDown } from "react-icons/fa";
+import { useTypingAnimation } from "../hooks/useAnimations";
 
 export default function Hero() {
+  const typedText = useTypingAnimation(
+    [
+      "DevOps Engineer",
+      "Cloud Architect",
+      "Automation Expert",
+      "Infrastructure Builder",
+    ],
+    80,
+    40,
+    2500
+  );
+
   return (
     <section
       id="home"
@@ -24,9 +39,14 @@ export default function Hero() {
         </h1>
 
         <div className="animate-fade-in-up animation-delay-400">
-          <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl mx-auto">
-            <span className="text-white font-semibold">DevOps Engineer</span> passionate about
-            cloud infrastructure, automation, and building scalable systems
+          <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl mx-auto h-16 flex items-center justify-center">
+            <span className="text-white font-semibold">
+              {typedText}
+              <span className="animate-pulse text-primary">|</span>
+            </span>
+          </p>
+          <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
+            Passionate about cloud infrastructure, automation, and building scalable systems
           </p>
         </div>
 
@@ -45,7 +65,7 @@ export default function Hero() {
             href="https://github.com/dannysavinon"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-primary transition-colors duration-300 hover:scale-110 transform"
+            className="text-gray-400 hover:text-primary transition-all duration-300 hover:scale-125 transform"
             aria-label="GitHub"
           >
             <FaGithub size={28} />
@@ -54,14 +74,14 @@ export default function Hero() {
             href="https://linkedin.com/in/dannysavinon"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-primary transition-colors duration-300 hover:scale-110 transform"
+            className="text-gray-400 hover:text-primary transition-all duration-300 hover:scale-125 transform"
             aria-label="LinkedIn"
           >
             <FaLinkedin size={28} />
           </a>
           <a
             href="mailto:dsavinon3@gmail.com"
-            className="text-gray-400 hover:text-primary transition-colors duration-300 hover:scale-110 transform"
+            className="text-gray-400 hover:text-primary transition-all duration-300 hover:scale-125 transform"
             aria-label="Email"
           >
             <FaEnvelope size={28} />
