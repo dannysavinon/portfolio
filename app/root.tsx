@@ -27,7 +27,21 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Danny Savinon - DevOps Engineer Portfolio" />
+        <meta name="description" content="Danny Savinon - DevOps Engineer with 4+ years of experience in AWS, Azure, CI/CD pipelines, Infrastructure as Code, and cloud architecture. Based in South Florida." />
+        <meta name="keywords" content="DevOps Engineer, AWS, Azure, Cloud Infrastructure, CI/CD, Terraform, CloudFormation, Docker, Kubernetes, GitHub Actions" />
+        <meta name="author" content="Danny Savinon" />
+
+        {/* Open Graph / Social */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Danny Savinon | DevOps Engineer" />
+        <meta property="og:description" content="DevOps Engineer with 4+ years of experience in AWS, Azure, CI/CD pipelines, and cloud architecture." />
+        <meta property="og:url" content="https://dannysavinon.github.io/portfolio/" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Danny Savinon | DevOps Engineer" />
+        <meta name="twitter:description" content="DevOps Engineer with 4+ years of experience in AWS, Azure, CI/CD pipelines, and cloud architecture." />
+
         <title>Danny Savinon | DevOps Engineer</title>
         <Meta />
         <Links />

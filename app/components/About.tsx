@@ -5,17 +5,17 @@ export default function About() {
     {
       icon: <FaCloud className="text-primary" size={24} />,
       title: "Cloud Architecture",
-      description: "Expert in AWS services and Azure cloud platforms",
+      description: "99.9%+ uptime across multi-region AWS deployments",
     },
     {
       icon: <FaServer className="text-primary" size={24} />,
       title: "Infrastructure as Code",
-      description: "CloudFormation, CDK, and automated deployments",
+      description: "35% improvement in IaC consistency with CloudFormation & CDK",
     },
     {
       icon: <FaCode className="text-primary" size={24} />,
       title: "CI/CD Pipelines",
-      description: "Azure DevOps and GitHub Actions automation",
+      description: "Reduced deployment time by 82% (45 min to 8 min)",
     },
   ];
 
@@ -35,9 +35,10 @@ export default function About() {
           {/* About Text */}
           <div className="space-y-6">
             <p className="text-gray-300 text-lg leading-relaxed">
-              I'm a <span className="text-white font-semibold">DevOps Engineer</span> based in{" "}
+              I'm a <span className="text-white font-semibold">DevOps Engineer</span> with{" "}
+              <span className="text-white font-semibold">4+ years of experience</span>, based in{" "}
               <span className="text-primary inline-flex items-center gap-1">
-                <FaMapMarkerAlt size={14} /> Delray Beach, Florida
+                <FaMapMarkerAlt size={14} /> South Florida
               </span>
               , specializing in cloud infrastructure, automation, and building scalable systems.
             </p>
