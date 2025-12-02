@@ -7,17 +7,18 @@ import {
   FaLinux,
   FaApple,
   FaWindows,
+  FaCloud,
+  FaTerminal,
+  FaBell,
 } from "react-icons/fa";
 import {
   SiKubernetes,
   SiTerraform,
   SiGithubactions,
-  SiAzuredevops,
   SiPowershell,
-  SiSumo,
   SiPagerduty,
-  SiAmazonecs,
 } from "react-icons/si";
+import { VscAzureDevops } from "react-icons/vsc";
 
 const skillCategories = [
   {
@@ -30,7 +31,7 @@ const skillCategories = [
   {
     title: "CI/CD & DevOps",
     skills: [
-      { name: "Azure DevOps", icon: <SiAzuredevops size={32} /> },
+      { name: "Azure DevOps", icon: <VscAzureDevops size={32} /> },
       { name: "GitHub Actions", icon: <SiGithubactions size={32} /> },
       { name: "Git", icon: <FaGitAlt size={32} /> },
     ],
@@ -47,7 +48,7 @@ const skillCategories = [
     title: "Containerization",
     skills: [
       { name: "Docker", icon: <FaDocker size={32} /> },
-      { name: "ECS", icon: <SiAmazonecs size={32} /> },
+      { name: "ECS", icon: <FaCloud size={32} /> },
       { name: "EKS/Kubernetes", icon: <SiKubernetes size={32} /> },
     ],
   },
@@ -56,13 +57,14 @@ const skillCategories = [
     skills: [
       { name: "Python", icon: <FaPython size={32} /> },
       { name: "PowerShell", icon: <SiPowershell size={32} /> },
+      { name: "Bash", icon: <FaTerminal size={32} /> },
     ],
   },
   {
     title: "Monitoring & Alerting",
     skills: [
       { name: "CloudWatch", icon: <FaAws size={32} /> },
-      { name: "Sumo Logic", icon: <SiSumo size={32} /> },
+      { name: "Sumo Logic", icon: <FaBell size={32} /> },
       { name: "PagerDuty", icon: <SiPagerduty size={32} /> },
     ],
   },
