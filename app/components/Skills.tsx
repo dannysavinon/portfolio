@@ -10,12 +10,24 @@ import {
   FaCloud,
   FaTerminal,
   FaBell,
+  FaReact,
+  FaNodeJs,
+  FaServer,
+  FaJira,
+  FaConfluence,
 } from "react-icons/fa";
 import {
   SiKubernetes,
   SiTerraform,
   SiGithubactions,
   SiPagerduty,
+  SiAnsible,
+  SiCelery,
+  SiDjango,
+  SiKotlin,
+  SiSwift,
+  SiNewrelic,
+  SiSnowflake,
 } from "react-icons/si";
 import { VscAzureDevops, VscTerminalPowershell } from "react-icons/vsc";
 
@@ -33,6 +45,7 @@ const skillCategories = [
       { name: "Azure DevOps", icon: <VscAzureDevops size={32} /> },
       { name: "GitHub Actions", icon: <SiGithubactions size={32} /> },
       { name: "Git", icon: <FaGitAlt size={32} /> },
+      { name: "Ansible", icon: <SiAnsible size={32} /> },
     ],
   },
   {
@@ -52,6 +65,18 @@ const skillCategories = [
     ],
   },
   {
+    title: "Languages & Frameworks",
+    skills: [
+      { name: "Python", icon: <FaPython size={32} /> },
+      { name: "Django", icon: <SiDjango size={32} /> },
+      { name: "Celery", icon: <SiCelery size={32} /> },
+      { name: "Node.js", icon: <FaNodeJs size={32} /> },
+      { name: "React", icon: <FaReact size={32} /> },
+      { name: "Kotlin", icon: <SiKotlin size={32} /> },
+      { name: "Swift", icon: <SiSwift size={32} /> },
+    ],
+  },
+  {
     title: "Scripting",
     skills: [
       { name: "Python", icon: <FaPython size={32} /> },
@@ -60,11 +85,27 @@ const skillCategories = [
     ],
   },
   {
-    title: "Monitoring & Alerting",
+    title: "Monitoring & Observability",
     skills: [
       { name: "CloudWatch", icon: <FaAws size={32} /> },
-      { name: "Sumo Logic", icon: <FaBell size={32} /> },
+      { name: "New Relic", icon: <SiNewrelic size={32} /> },
       { name: "PagerDuty", icon: <SiPagerduty size={32} /> },
+      { name: "Sumo Logic", icon: <FaBell size={32} /> },
+      { name: "Sigma", icon: <FaBell size={32} /> },
+    ],
+  },
+  {
+    title: "Data & Integration",
+    skills: [
+      { name: "Snowflake", icon: <SiSnowflake size={32} /> },
+      { name: "SFTP", icon: <FaServer size={32} /> },
+    ],
+  },
+  {
+    title: "Collaboration",
+    skills: [
+      { name: "Jira", icon: <FaJira size={32} /> },
+      { name: "Confluence", icon: <FaConfluence size={32} /> },
     ],
   },
   {
