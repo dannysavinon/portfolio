@@ -39,6 +39,7 @@ import {
   SiApachekafka,
   SiRabbitmq,
   SiPacker,
+  SiSumologic,
 } from "react-icons/si";
 import { VscAzureDevops, VscTerminalPowershell } from "react-icons/vsc";
 
@@ -72,7 +73,7 @@ const skillCategories = [
     title: "Containerization",
     skills: [
       { name: "Docker", icon: <FaDocker size={32} /> },
-      { name: "ECS", icon: <FaCloud size={32} /> },
+      { name: "ECS", icon: <FaAws size={32} /> },
       { name: "EKS/Kubernetes", icon: <SiKubernetes size={32} /> },
     ],
   },
@@ -94,8 +95,7 @@ const skillCategories = [
       { name: "CloudWatch", icon: <FaAws size={32} /> },
       { name: "New Relic", icon: <SiNewrelic size={32} /> },
       { name: "PagerDuty", icon: <SiPagerduty size={32} /> },
-      { name: "Sumo Logic", icon: <FaBell size={32} /> },
-      { name: "Sigma", icon: <FaBell size={32} /> },
+      { name: "Sumo Logic", icon: <SiSumologic size={32} /> },
     ],
   },
   {
