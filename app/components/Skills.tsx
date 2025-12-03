@@ -43,104 +43,106 @@ import {
 } from "react-icons/si";
 import { VscAzureDevops, VscTerminalPowershell } from "react-icons/vsc";
 
+const ICON_SIZE = 28;
+
 const skillCategories = [
   {
     title: "Cloud Platforms",
     skills: [
-      { name: "AWS", icon: <FaAws size={32} /> },
-      { name: "Azure", icon: <FaMicrosoft size={32} /> },
+      { name: "AWS", icon: <FaAws size={ICON_SIZE} /> },
+      { name: "Azure", icon: <FaMicrosoft size={ICON_SIZE} /> },
     ],
   },
   {
     title: "CI/CD & DevOps",
     skills: [
-      { name: "Azure DevOps", icon: <VscAzureDevops size={32} /> },
-      { name: "GitHub Actions", icon: <SiGithubactions size={32} /> },
-      { name: "Git", icon: <FaGitAlt size={32} /> },
-      { name: "Ansible", icon: <SiAnsible size={32} /> },
+      { name: "Azure DevOps", icon: <VscAzureDevops size={ICON_SIZE} /> },
+      { name: "GitHub Actions", icon: <SiGithubactions size={ICON_SIZE} /> },
+      { name: "Git", icon: <FaGitAlt size={ICON_SIZE} /> },
+      { name: "Ansible", icon: <SiAnsible size={ICON_SIZE} /> },
     ],
   },
   {
     title: "Infrastructure as Code",
     skills: [
-      { name: "CloudFormation", icon: <FaAws size={32} /> },
-      { name: "CDK", icon: <FaAws size={32} /> },
-      { name: "Terraform", icon: <SiTerraform size={32} /> },
-      { name: "Packer", icon: <SiPacker size={32} /> },
+      { name: "CloudFormation", icon: <FaAws size={ICON_SIZE} /> },
+      { name: "CDK", icon: <FaAws size={ICON_SIZE} /> },
+      { name: "Terraform", icon: <SiTerraform size={ICON_SIZE} /> },
+      { name: "Packer", icon: <SiPacker size={ICON_SIZE} /> },
     ],
   },
   {
     title: "Containerization",
     skills: [
-      { name: "Docker", icon: <FaDocker size={32} /> },
-      { name: "ECS", icon: <FaAws size={32} /> },
-      { name: "EKS/Kubernetes", icon: <SiKubernetes size={32} /> },
+      { name: "Docker", icon: <FaDocker size={ICON_SIZE} /> },
+      { name: "ECS", icon: <FaAws size={ICON_SIZE} /> },
+      { name: "EKS/Kubernetes", icon: <SiKubernetes size={ICON_SIZE} /> },
     ],
   },
   {
     title: "Languages & Frameworks",
     skills: [
-      { name: "Python", icon: <FaPython size={32} /> },
-      { name: "Django", icon: <SiDjango size={32} /> },
-      { name: "Celery", icon: <SiCelery size={32} /> },
-      { name: "Node.js", icon: <FaNodeJs size={32} /> },
-      { name: "React", icon: <FaReact size={32} /> },
-      { name: "Kotlin", icon: <SiKotlin size={32} /> },
-      { name: "Swift", icon: <SiSwift size={32} /> },
+      { name: "Python", icon: <FaPython size={ICON_SIZE} /> },
+      { name: "Django", icon: <SiDjango size={ICON_SIZE} /> },
+      { name: "Celery", icon: <SiCelery size={ICON_SIZE} /> },
+      { name: "Node.js", icon: <FaNodeJs size={ICON_SIZE} /> },
+      { name: "React", icon: <FaReact size={ICON_SIZE} /> },
+      { name: "Kotlin", icon: <SiKotlin size={ICON_SIZE} /> },
+      { name: "Swift", icon: <SiSwift size={ICON_SIZE} /> },
     ],
   },
   {
     title: "Monitoring & Observability",
     skills: [
-      { name: "CloudWatch", icon: <FaAws size={32} /> },
-      { name: "New Relic", icon: <SiNewrelic size={32} /> },
-      { name: "PagerDuty", icon: <SiPagerduty size={32} /> },
-      { name: "Sumo Logic", icon: <SiSumologic size={32} /> },
+      { name: "CloudWatch", icon: <FaAws size={ICON_SIZE} /> },
+      { name: "New Relic", icon: <SiNewrelic size={ICON_SIZE} /> },
+      { name: "PagerDuty", icon: <SiPagerduty size={ICON_SIZE} /> },
+      { name: "Sumo Logic", icon: <SiSumologic size={ICON_SIZE} /> },
     ],
   },
   {
     title: "Databases",
     skills: [
-      { name: "PostgreSQL", icon: <SiPostgresql size={32} /> },
-      { name: "MySQL", icon: <SiMysql size={32} /> },
-      { name: "MongoDB", icon: <SiMongodb size={32} /> },
-      { name: "Redis", icon: <SiRedis size={32} /> },
-      { name: "RDS", icon: <FaAws size={32} /> },
-      { name: "DynamoDB", icon: <FaAws size={32} /> },
+      { name: "PostgreSQL", icon: <SiPostgresql size={ICON_SIZE} /> },
+      { name: "MySQL", icon: <SiMysql size={ICON_SIZE} /> },
+      { name: "MongoDB", icon: <SiMongodb size={ICON_SIZE} /> },
+      { name: "Redis", icon: <SiRedis size={ICON_SIZE} /> },
+      { name: "RDS", icon: <FaAws size={ICON_SIZE} /> },
+      { name: "DynamoDB", icon: <FaAws size={ICON_SIZE} /> },
     ],
   },
   {
     title: "Message Queues",
     skills: [
-      { name: "SQS", icon: <FaAws size={32} /> },
-      { name: "SNS", icon: <FaAws size={32} /> },
-      { name: "Kafka", icon: <SiApachekafka size={32} /> },
-      { name: "RabbitMQ", icon: <SiRabbitmq size={32} /> },
+      { name: "SQS", icon: <FaAws size={ICON_SIZE} /> },
+      { name: "SNS", icon: <FaAws size={ICON_SIZE} /> },
+      { name: "Kafka", icon: <SiApachekafka size={ICON_SIZE} /> },
+      { name: "RabbitMQ", icon: <SiRabbitmq size={ICON_SIZE} /> },
     ],
   },
   {
     title: "Data & Integration",
     skills: [
-      { name: "Snowflake", icon: <SiSnowflake size={32} /> },
-      { name: "SFTP", icon: <FaServer size={32} /> },
-      { name: "Jira", icon: <FaJira size={32} /> },
-      { name: "Confluence", icon: <FaConfluence size={32} /> },
+      { name: "Snowflake", icon: <SiSnowflake size={ICON_SIZE} /> },
+      { name: "SFTP", icon: <FaServer size={ICON_SIZE} /> },
+      { name: "Jira", icon: <FaJira size={ICON_SIZE} /> },
+      { name: "Confluence", icon: <FaConfluence size={ICON_SIZE} /> },
     ],
   },
   {
     title: "Operating Systems",
     skills: [
-      { name: "Linux", icon: <FaLinux size={32} /> },
-      { name: "macOS", icon: <FaApple size={32} /> },
-      { name: "Windows", icon: <FaWindows size={32} /> },
+      { name: "Linux", icon: <FaLinux size={ICON_SIZE} /> },
+      { name: "macOS", icon: <FaApple size={ICON_SIZE} /> },
+      { name: "Windows", icon: <FaWindows size={ICON_SIZE} /> },
     ],
   },
   {
     title: "Scripting",
     skills: [
-      { name: "Python", icon: <FaPython size={32} /> },
-      { name: "PowerShell", icon: <VscTerminalPowershell size={32} /> },
-      { name: "Bash", icon: <FaTerminal size={32} /> },
+      { name: "Python", icon: <FaPython size={ICON_SIZE} /> },
+      { name: "PowerShell", icon: <VscTerminalPowershell size={ICON_SIZE} /> },
+      { name: "Bash", icon: <FaTerminal size={ICON_SIZE} /> },
     ],
   },
 ];
@@ -170,11 +172,11 @@ export default function Skills() {
                 <h3 className="text-xl font-semibold text-primary mb-6">
                   {category.title}
                 </h3>
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-col gap-4">
                   {category.skills.map((skill, skillIndex) => (
                     <div
                       key={skillIndex}
-                      className="skill-badge flex items-center gap-3 group"
+                      className="skill-badge flex items-center gap-3 group w-full"
                     >
                       <span className="text-gray-400 group-hover:text-primary transition-all duration-300 group-hover:scale-110">
                         {skill.icon}

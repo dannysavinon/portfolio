@@ -166,7 +166,7 @@ body {
 
 /* Skill badge */
 .skill-badge {
-  @apply px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300;
+  @apply px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 w-full;
   background: linear-gradient(145deg, #171717 0%, #0d0d0d 100%);
   border: 1px solid rgba(220, 38, 38, 0.2);
 }
