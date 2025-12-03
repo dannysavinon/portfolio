@@ -93,7 +93,7 @@ export function useCountAnimation(
           observer.unobserve(element);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.25 }
     );
 
     observer.observe(element);

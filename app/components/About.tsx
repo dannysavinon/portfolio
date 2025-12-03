@@ -6,7 +6,7 @@ import TiltCard from "./TiltCard";
 import { useCountAnimation } from "../hooks/useAnimations";
 
 function AnimatedStat({ value, suffix = "", label }: { value: number; suffix?: string; label: string }) {
-  const { count, ref } = useCountAnimation(value, 2000);
+  const { count, ref } = useCountAnimation(value, 1200);
 
   return (
     <div ref={ref} className="text-center">

@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,15 +14,6 @@ export default function Footer() {
 
           {/* Social Links */}
           <div className="flex items-center gap-4">
-            <a
-              href="https://github.com/dannysavinon"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-primary transition-colors duration-300"
-              aria-label="GitHub"
-            >
-              <FaGithub size={20} />
-            </a>
             <a
               href="https://linkedin.com/in/dannysavinon"
               target="_blank"

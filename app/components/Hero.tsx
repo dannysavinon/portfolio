@@ -1,6 +1,6 @@
 "use client";
 
-import { FaGithub, FaLinkedin, FaEnvelope, FaChevronDown } from "react-icons/fa";
+import { FaLinkedin, FaEnvelope, FaChevronDown } from "react-icons/fa";
 import { useTypingAnimation } from "../hooks/useAnimations";
 
 export default function Hero() {
@@ -61,15 +61,6 @@ export default function Hero() {
 
         {/* Social Links */}
         <div className="flex items-center justify-center gap-6 animate-fade-in-up animation-delay-600">
-          <a
-            href="https://github.com/dannysavinon"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-primary transition-all duration-300 hover:scale-125 transform"
-            aria-label="GitHub"
-          >
-            <FaGithub size={28} />
-          </a>
           <a
             href="https://linkedin.com/in/dannysavinon"
             target="_blank"
