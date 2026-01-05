@@ -8,8 +8,8 @@ const experiences = [
     title: "DevOps Engineer",
     company: "MyBambu",
     location: "West Palm Beach, FL",
-    period: "May 2025 - Present",
-    current: true,
+    period: "May 2025 - Dec 2025",
+    current: false,
     responsibilities: [
       "Led the migration of legacy EC2 infrastructure to Amazon ECS, improving scalability, reducing infrastructure costs, and streamlining deployment management",
       "Implemented AWS Organizations to centralize account governance, strengthen security boundaries, and enforce environment-wide best practices",
