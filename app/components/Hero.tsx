@@ -2,6 +2,7 @@
 
 import { FaLinkedin, FaGithub, FaEnvelope, FaChevronDown } from "react-icons/fa";
 import { useTypingAnimation } from "../hooks/useAnimations";
+import { Link } from "react-router";
 
 export default function Hero() {
   const typedText = useTypingAnimation(
@@ -55,14 +56,12 @@ export default function Hero() {
               <a href="#contact" className="btn-primary w-full sm:w-auto text-white">
                 Get In Touch
               </a>
-              <a
-                href="/resume"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/resume"
                 className="btn-outline w-full sm:w-auto"
               >
                 View Resume
-              </a>
+              </Link>
             </div>
 
             {/* Social Links */}

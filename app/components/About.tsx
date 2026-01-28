@@ -4,6 +4,7 @@ import { FaMapMarkerAlt, FaCloud, FaServer, FaCode } from "react-icons/fa";
 import ScrollReveal from "./ScrollReveal";
 import TiltCard from "./TiltCard";
 import { useCountAnimation } from "../hooks/useAnimations";
+import { Link } from "react-router";
 
 function AnimatedStat({ value, suffix = "", label }: { value: number; suffix?: string; label: string }) {
   const { count, ref } = useCountAnimation(value, 1200);
@@ -89,14 +90,12 @@ export default function About() {
               </p>
 
               <div className="pt-4">
-                <a
-                  href="/resume"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/resume"
                   className="btn-primary text-white inline-block"
                 >
                   View Resume
-                </a>
+                </Link>
               </div>
             </div>
           </ScrollReveal>
