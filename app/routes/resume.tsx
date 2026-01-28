@@ -17,7 +17,7 @@ const contactInfo = {
     github: "github.com/dannysavinon",
 };
 
-const summary = "Results-driven DevOps Engineer with 4+ years of experience architecting secure, scalable cloud infrastructure and automating delivery pipelines for enterprise applications. Specialized in AWS and Azure ecosystems, with proven success in reducing deployment times by over 80%, ensuring 99.99% system availability, and implementing robust security governance frameworks. Expert in translating complex operational challenges into reliable, automated Infrastructure as Code solutions.";
+const summary = "Results-driven DevOps Engineer with 5 years of experience architecting secure, scalable cloud infrastructure and automating delivery pipelines for enterprise applications. Specialized in AWS and Azure ecosystems, with proven success in reducing deployment times by over 80%, ensuring 99.99% system availability, and implementing robust security governance frameworks. Expert in translating complex operational challenges into reliable, automated Infrastructure as Code solutions.";
 
 const experiences = [
     {

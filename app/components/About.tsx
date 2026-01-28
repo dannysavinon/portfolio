@@ -54,7 +54,7 @@ export default function About() {
         {/* Stats Row */}
         <ScrollReveal delay={100}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            <AnimatedStat value={4} suffix="+" label="Years Experience" />
+            <AnimatedStat value={5} suffix="+" label="Years Experience" />
             <AnimatedStat value={75} suffix="%" label="Fewer Deploy Incidents" />
             <AnimatedStat value={82} suffix="%" label="Faster Deployments" />
             <AnimatedStat value={40} suffix="%" label="Faster Mobile Releases" />
@@ -67,7 +67,7 @@ export default function About() {
             <div className="space-y-6">
               <p className="text-gray-300 text-lg leading-relaxed">
                 I'm a <span className="text-white font-semibold">DevOps Engineer</span> with{" "}
-                <span className="text-white font-semibold">4+ years of experience</span>, based in{" "}
+                <span className="text-white font-semibold">5 years of experience</span>, based in{" "}
                 <span className="text-primary inline-flex items-center gap-1">
                   <FaMapMarkerAlt size={14} /> South Florida
                 </span>
