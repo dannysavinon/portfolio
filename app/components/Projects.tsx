@@ -10,7 +10,7 @@ const projects = [
         description: "A comprehensive library of Terraform modules for rapid AWS environment provisioning.",
         tags: ["Terraform", "AWS", "CI/CD"],
         status: "In Progress",
-        link: "#"
+        link: "https://github.com/dannysavinon/cloud-infra-automation"
     },
     {
         title: "Kubernetes Operator",
@@ -56,8 +56,8 @@ export default function Projects() {
                                             <FaCode size={24} />
                                         </div>
                                         <span className={`px-3 py-1 text-xs font-medium rounded-full border ${project.status === "In Progress"
-                                                ? "bg-blue-500/10 text-blue-400 border-blue-500/20"
-                                                : "bg-purple-500/10 text-purple-400 border-purple-500/20"
+                                            ? "bg-blue-500/10 text-blue-400 border-blue-500/20"
+                                            : "bg-purple-500/10 text-purple-400 border-purple-500/20"
                                             }`}>
                                             {project.status}
                                         </span>
