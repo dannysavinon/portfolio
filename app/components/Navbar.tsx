@@ -39,11 +39,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-black/90 backdrop-blur-md shadow-lg shadow-red-900/10"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+          ? "glass shadow-lg shadow-red-900/10"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="section-container">
         <div className="flex items-center justify-between h-16">
@@ -61,11 +60,10 @@ export default function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className={`nav-link transition-colors duration-300 ${
-                    isActive
+                  className={`nav-link transition-colors duration-300 ${isActive
                       ? "text-primary font-medium"
                       : "text-gray-300 hover:text-white"
-                  }`}
+                    }`}
                 >
                   {link.name}
                 </a>
@@ -92,11 +90,10 @@ export default function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className={`block py-3 transition-colors duration-300 ${
-                    isActive
+                  className={`block py-3 transition-colors duration-300 ${isActive
                       ? "text-primary font-medium"
                       : "text-gray-300 hover:text-primary"
-                  }`}
+                    }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}

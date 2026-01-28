@@ -296,13 +296,13 @@ export default function CircuitBackground() {
     const animate = () => {
       if (!ctx || !canvas) return;
 
-      ctx.fillStyle = "rgba(10, 10, 15, 1)";
+      ctx.fillStyle = "rgba(5, 5, 5, 1)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Subtle grid
-      ctx.strokeStyle = "rgba(239, 68, 68, 0.03)";
+      ctx.strokeStyle = "rgba(239, 68, 68, 0.02)";
       ctx.lineWidth = 1;
-      const gridSize = 30;
+      const gridSize = 40;
       for (let x = 0; x < canvas.width; x += gridSize) {
         ctx.beginPath();
         ctx.moveTo(x, 0);
@@ -318,9 +318,9 @@ export default function CircuitBackground() {
 
       const time = Date.now() * 0.001;
 
-      tracesRef.current.forEach((trace) => drawTrace(ctx, trace, time));
-      viasRef.current.forEach((via) => drawVia(ctx, via, time));
-      chipsRef.current.forEach((chip) => drawChip(ctx, chip, time));
+      tracesRef.current.forEach((trace: Trace) => drawTrace(ctx, trace, time));
+      viasRef.current.forEach((via: Via) => drawVia(ctx, via, time));
+      chipsRef.current.forEach((chip: Chip) => drawChip(ctx, chip, time));
 
       animationRef.current = requestAnimationFrame(animate);
     };
@@ -341,7 +341,7 @@ export default function CircuitBackground() {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none z-0"
-      style={{ opacity: 0.5 }}
+      style={{ opacity: 0.4 }}
     />
   );
 }

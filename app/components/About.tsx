@@ -23,17 +23,17 @@ export default function About() {
     {
       icon: <FaCloud className="text-primary" size={24} />,
       title: "Cloud Architecture",
-      description: "Multi-region AWS deployments with ECS Fargate & Terraform",
+      description: "Architected active-active multi-region AWS deployments using ECS Fargate, Terraform, and Global Tables",
     },
     {
       icon: <FaServer className="text-primary" size={24} />,
       title: "Infrastructure as Code",
-      description: "35% improvement in IaC consistency with CloudFormation & CDK",
+      description: "Achieved 100% IaC coverage, reducing environment provisioning time by 95% with modular CloudFormation & CDK",
     },
     {
       icon: <FaCode className="text-primary" size={24} />,
-      title: "CI/CD Pipelines",
-      description: "Reduced deployment time by 82% (45 min to 8 min)",
+      title: "CI/CD Orchestration",
+      description: "Engineered self-service pipelines reducing deployment time by 82% and eliminating manual release errors",
     },
   ];
 
@@ -90,12 +90,12 @@ export default function About() {
 
               <div className="pt-4">
                 <a
-                  href="/portfolio/DannySavinon.pdf"
+                  href="/resume"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary text-white inline-block"
                 >
-                  Download Resume
+                  View Resume
                 </a>
               </div>
             </div>
