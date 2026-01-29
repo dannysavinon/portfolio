@@ -18,7 +18,7 @@ const projects = [
         link: "https://github.com/dannysavinon/k8s-observability-stack"
     },
     {
-        title: "Crypto Alert Serverless",
+        title: "Serverless Crypto Alerts",
         description: "Serverless event-driven architecture for real-time cryptocurrency price tracking and alerts.",
         tags: ["AWS Lambda", "Serverless", "Terraform", "Python"],
         link: "https://github.com/dannysavinon/crypto-alert-serverless"
