@@ -1,6 +1,6 @@
 "use client";
 
-import { FaCode, FaRocket, FaTools } from "react-icons/fa";
+import { FaCode, FaRocket, FaTools, FaGithub } from "react-icons/fa";
 import ScrollReveal from "./ScrollReveal";
 import TiltCard from "./TiltCard";
 
@@ -25,6 +25,13 @@ const projects = [
         tags: ["AWS Lambda", "Serverless", "Terraform", "Python"],
         status: "Completed",
         link: "https://github.com/dannysavinon/crypto-alert-serverless"
+    },
+    {
+        title: "InfraGraph",
+        description: "Visual, drag-and-drop tool that generates Terraform code for cloud infrastructure.",
+        tags: ["React", "Terraform", "Cloud Infrastructure"],
+        status: "In Progress",
+        link: "https://github.com/dannysavinon/infragraph"
     }
 ];
 
@@ -82,6 +89,16 @@ export default function Projects() {
                                             </span>
                                         ))}
                                     </div>
+
+                                    <a
+                                        href={project.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors group/link"
+                                    >
+                                        <FaGithub className="text-lg group-hover/link:text-white transition-colors" />
+                                        <span>View Code</span>
+                                    </a>
                                 </div>
                             </TiltCard>
                         </ScrollReveal>
