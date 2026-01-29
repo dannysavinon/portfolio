@@ -24,7 +24,7 @@ export default function About() {
     {
       icon: <FaCloud className="text-primary" size={24} />,
       title: "Cloud Architecture",
-      description: "Architected active-active multi-region AWS deployments using ECS Fargate, Terraform, and Global Tables",
+      description: "Architected multi-account AWS environments and zero-downtime migrations using ECS Fargate and Terraform",
     },
     {
       icon: <FaServer className="text-primary" size={24} />,
@@ -34,7 +34,7 @@ export default function About() {
     {
       icon: <FaCode className="text-primary" size={24} />,
       title: "CI/CD Orchestration",
-      description: "Engineered self-service pipelines reducing deployment time by 82% and eliminating manual release errors",
+      description: "Standardized self-service pipelines reducing deployment time by 60% and enabling safer releases",
     },
   ];
 
@@ -56,9 +56,9 @@ export default function About() {
         <ScrollReveal delay={100}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             <AnimatedStat value={5} suffix="+" label="Years Experience" />
-            <AnimatedStat value={75} suffix="%" label="Fewer Deploy Incidents" />
-            <AnimatedStat value={82} suffix="%" label="Faster Deployments" />
-            <AnimatedStat value={40} suffix="%" label="Faster Mobile Releases" />
+            <AnimatedStat value={99.9} suffix="%" label="System Uptime" />
+            <AnimatedStat value={60} suffix="%" label="Faster Deployments" />
+            <AnimatedStat value={4} suffix="x" label="Faster Mobile Releases" />
           </div>
         </ScrollReveal>
 
@@ -67,7 +67,7 @@ export default function About() {
           <ScrollReveal direction="left" delay={200}>
             <div className="space-y-6">
               <p className="text-gray-300 text-lg leading-relaxed">
-                I'm a <span className="text-white font-semibold">DevOps Engineer</span> with{" "}
+                I'm a <span className="text-white font-semibold">Senior DevOps Engineer</span> with{" "}
                 <span className="text-white font-semibold">5 years of experience</span>, based in{" "}
                 <span className="text-primary inline-flex items-center gap-1">
                   <FaMapMarkerAlt size={14} /> South Florida

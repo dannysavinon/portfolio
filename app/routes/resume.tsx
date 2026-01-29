@@ -44,7 +44,7 @@ const experiences = [
         responsibilities: [
             "Automated the end-to-end provisioning of AWS accounts using Landing Zone Accelerator, cutting new environment setup time from days to hours.",
             "Designed a least-privilege IAM architecture, creating granular permission boundaries that mitigated internal security risks across 20+ accounts.",
-            "Managed mission-critical infrastructure supporting global franchise operations, ensuring 99.99% availability for booking and workout tracking systems.",
+            "Managed mission-critical infrastructure supporting global franchise operations, ensuring 99.9% availability for booking and workout tracking systems.",
             "Developed advanced observability solutions using CloudWatch and Lambda, creating self-healing infrastructure that automatically remediated common faults.",
             "Implemented a comprehensive patch management strategy using Systems Manager (SSM), achieving 99% compliance across a fleet of 200+ EC2 instances.",
             "Modernized deployment workflows by introducing Blue/Green deployment strategies on ECS, enabling daytime releases with zero user impact.",
