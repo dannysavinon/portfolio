@@ -6,25 +6,25 @@ import TiltCard from "./TiltCard";
 
 const projects = [
     {
-        title: "Cloud Infrastructure Automation",
-        description: "A comprehensive library of Terraform modules for rapid AWS environment provisioning.",
-        tags: ["Terraform", "AWS", "CI/CD"],
-        status: "In Progress",
-        link: "https://github.com/dannysavinon/cloud-infra-automation"
+        title: "Kubernetes GitOps Platform",
+        description: "End-to-end GitOps platform for Kubernetes managing multi-cluster deployments with ArgoCD.",
+        tags: ["Kubernetes", "GitOps", "ArgoCD", "Terraform"],
+        status: "Completed",
+        link: "https://github.com/dannysavinon/k8s-gitops-platform"
     },
     {
-        title: "Kubernetes Operator",
-        description: "Custom K8s operator for managing stateful applications with automated backups.",
-        tags: ["Go", "Kubernetes", "Docker"],
-        status: "Planning",
-        link: "#"
+        title: "Kubernetes Observability Stack",
+        description: "Comprehensive monitoring and logging solution for Kubernetes clusters using Prometheus and Grafana.",
+        tags: ["Kubernetes", "Prometheus", "Grafana", "Terraform"],
+        status: "Completed",
+        link: "https://github.com/dannysavinon/k8s-observability-stack"
     },
     {
-        title: "DevOps Dashboard",
-        description: "Real-time visualization of deployment metrics and system health across multiple environments.",
-        tags: ["React", "TypeScript", "GraphQL"],
-        status: "In Progress",
-        link: "#"
+        title: "Crypto Alert Serverless",
+        description: "Serverless event-driven architecture for real-time cryptocurrency price tracking and alerts.",
+        tags: ["AWS Lambda", "Serverless", "Terraform", "Python"],
+        status: "Completed",
+        link: "https://github.com/dannysavinon/crypto-alert-serverless"
     }
 ];
 
@@ -55,9 +55,11 @@ export default function Projects() {
                                         <div className="p-3 rounded-lg bg-primary/10 text-primary">
                                             <FaCode size={24} />
                                         </div>
-                                        <span className={`px-3 py-1 text-xs font-medium rounded-full border ${project.status === "In Progress"
-                                            ? "bg-blue-500/10 text-blue-400 border-blue-500/20"
-                                            : "bg-purple-500/10 text-purple-400 border-purple-500/20"
+                                        <span className={`px-3 py-1 text-xs font-medium rounded-full border ${project.status === "Completed"
+                                            ? "bg-green-500/10 text-green-400 border-green-500/20"
+                                            : project.status === "In Progress"
+                                                ? "bg-blue-500/10 text-blue-400 border-blue-500/20"
+                                                : "bg-purple-500/10 text-purple-400 border-purple-500/20"
                                             }`}>
                                             {project.status}
                                         </span>
