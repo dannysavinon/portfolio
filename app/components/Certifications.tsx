@@ -113,27 +113,6 @@ export default function Certifications() {
           ))}
         </div>
 
-        {/* Achievements highlight */}
-        <div className="mt-16 card p-8">
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">
-            Key <span className="gradient-text">Achievements</span>
-          </h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              "Cut mobile release times by 40% through automated Azure DevOps pipelines",
-              "Improved IaC consistency by 35% with reusable CloudFormation templates",
-              "Reduced deployment time by 30% with enhanced CI/CD pipelines",
-              "Reduced MTTR by 15% through proactive CloudWatch monitoring",
-              "Achieved 95% compliance with automated patch management",
-              "Supported PCI and SOC 2 compliance readiness initiatives",
-            ].map((achievement, index) => (
-              <div key={index} className="flex items-start gap-3">
-                <span className="text-primary text-xl font-bold">+</span>
-                <p className="text-gray-300">{achievement}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
