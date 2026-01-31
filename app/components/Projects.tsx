@@ -1,6 +1,6 @@
 "use client";
 
-import { FaCode, FaRocket, FaTools, FaGithub } from "react-icons/fa";
+import { FaCode, FaGithub } from "react-icons/fa";
 import ScrollReveal from "./ScrollReveal";
 import TiltCard from "./TiltCard";
 
@@ -23,12 +23,7 @@ const projects = [
         tags: ["AWS Lambda", "Serverless", "Terraform", "Python"],
         link: "https://github.com/dannysavinon/crypto-alert-serverless"
     },
-    {
-        title: "InfraGraph",
-        description: "Visual, drag-and-drop tool that generates Terraform code for cloud infrastructure.",
-        tags: ["React", "Terraform", "Cloud Infrastructure"],
-        link: "https://github.com/dannysavinon/infragraph"
-    }
+
 ];
 
 export default function Projects() {
